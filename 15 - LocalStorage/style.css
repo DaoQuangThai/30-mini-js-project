@@ -1,22 +1,25 @@
-html {
+/* html {
   box-sizing: border-box;
-  background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background: url('https://cdn.wallpapersafari.com/4/72/swS32t.jpg') center
+    no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit; 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 svg {
-  fill:white;
-  background: rgba(0,0,0,0.1);
+  fill: white;
+  background: rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 50%;
   width: 200px;
@@ -26,8 +29,8 @@ svg {
 .wrapper {
   padding: 20px;
   max-width: 350px;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -44,7 +47,7 @@ h2 {
 }
 
 .plates li {
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
@@ -75,5 +78,112 @@ h2 {
 .add-items input {
   padding: 10px;
   outline: 0;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+} */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  background: url('https://cdn.wallpapersafari.com/4/72/swS32t.jpg') center /
+    cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* transform: translateY(-30%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  fill: white;
+  height: 20rem;
+  width: 20rem;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 50%;
+  margin-bottom: 5rem;
+}
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 50rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.add-items {
+  margin-top: 2rem;
+}
+
+.add-items input {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.plates {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.plates li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.plates label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.plates input {
+  display: none;
+}
+
+.plates input + label:before {
+  content: '⬜️';
+  margin-right: 10px;
+}
+
+.plates input:checked + label:before {
+  content: '🌮';
+}
+
+.check-all {
+  margin-top: 1rem;
 }
