@@ -182,17 +182,17 @@
         padding: 20px;
         /* top: -20px; */
         border-radius: 2px;
-        transition: opacity 0.25s;
+        transition: all 0.2s;
         transform: translateY(80px);
         will-change: opacity;
         display: none;
-        /* visibility: hidden; */
       }
 
       .trigger-enter .dropdown {
         display: block;
       }
 
+      /* hehe chỗ này khá khó hiểu tại sao phải set time out ngay đây nói mới có thể transition */
       .trigger-enter-active .dropdown {
         opacity: 1;
       }
@@ -203,7 +203,8 @@
         border-radius: 4px;
         box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
           0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: opacity 0.2s, transform 0.25s;
+        transition: all 0.25s, opacity 0.15s;
+
         /* transform-origin: 50% 0; */
         display: flex;
         justify-content: center;
@@ -282,6 +283,7 @@
           this.classList.contains('trigger-enter') &&
             this.classList.add('trigger-enter-active');
         }, 150);
+        // setTimeout(() => background.classList.add('open'), 150);
         background.classList.add('open');
 
         const dropdown = this.querySelector('.dropdown');
